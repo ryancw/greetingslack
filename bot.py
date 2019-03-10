@@ -74,7 +74,7 @@ def parse_join(message):
         if (UNFURL.lower() == "false"):
           data = data.update({'unfurl_link': 'false'})
 
-        xx = requests.post("https://slack.com/api/chat.postMessage" + urllib.urlencode(data))
+        xx = requests.post("https://slack.com/api/chat.postMessage?" + urllib.urlencode(data))
 	logging.debug(xx)
         logging.debug('\033[91m' + "HELLO SENT TO " + user_id + '\033[0m')
 
