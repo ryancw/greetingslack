@@ -72,7 +72,7 @@ def parse_join(message):
         logging.debug(data)
 
         if (UNFURL.lower() == "false"):
-          data = data.update({'unfurl_link': 'false'})
+          data.update({'unfurl_link': 'false'})
 	base_url = "https://slack.com/api/chat.postMessage?"
 	new_url = urllib.urlencode(data)
 	combined_url = base_url + new_url
